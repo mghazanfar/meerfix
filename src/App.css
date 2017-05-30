@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.slick-slider {
+  top: 56px;
+}
+
+.slick-dots {
+background-color: red;
+}
+
+.mt-6{
+  margin-top: 5rem;
+}
+
+.lead{
+  font-size: 2.5rem !important;
+}
+
+.cursor {
+cursor: default;
+}
+
+.slick-prev {
+  left: 29px !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 29px !important;
+}
+
+.borderRadius {
+  border-radius: 16rem;
+}
+
+.cursor:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px){
+.offset-md-auto {
+  margin-left: 20.666667%;
+}
+}
+
+.learnMore {
+  font-weight: 600;
+  font-family: 'Segoe UI Condensed','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+  color: white;
+}
+.learnMore:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.radiusZero{
+  border-radius: 0rem !important;
+}
+
+.borderLeft {
+  border-left: 5px solid transparent !important;
+}
+
+.borderLeft:hover {
+  border-left: 5px solid red !important;
+}
+
+.transparentButton {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+.btn-secondary:focus, .btn-secondary.focus {
+  box-shadow: 0 0 0 0px transparent !important;
+  -webkit-box-shadow: 0 0 0 0px transparent !important;
+}
+
+.noBorder {
+  border-radius: 0rem !important;
+  border: 0px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.card-img-overlay .card-title{
+  color:red !important;
+}
+
+.card-img-overlay .mt-5{
+  margin-top: 10rem !important;
+}
+
+.text-color {
+  color: red;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
