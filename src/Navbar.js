@@ -1,5 +1,7 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import Partner from './Partner';
+import './App.css';
 
 export default class Navbarr extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ export default class Navbarr extends React.Component {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -18,20 +21,26 @@ export default class Navbarr extends React.Component {
   render() {
 
       var style = {
-     color: 'red'
+     color: 'dodgerblue'
    };
     return (
       <div>
-        <Navbar color="inverse"  light toggleable className="fixed-top">
+        <Navbar light toggleable className="fixed-top bg-trans">
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/" style={style}>reactstrap</NavbarBrand>
+          <NavbarBrand href="/" style={style}>MèérFix</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink style={style} href="/components/">Components</NavLink>
+                <NavLink href="#partners" style={style} component={Partner}><strong>Partnership</strong></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap" style={style}>Github</NavLink>
+                <NavLink style={style} href="#tryUs"><strong>Try us now!</strong></NavLink>
+              </NavItem>
+              <NavItem data-target="#reviews">
+                <NavLink style={style} href="#reviews"><strong>Reviews</strong></NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#about" style={style}><strong>About Us</strong></NavLink>
               </NavItem>
             </Nav>
           </Collapse>

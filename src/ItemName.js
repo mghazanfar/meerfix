@@ -1,9 +1,21 @@
 import React from 'react';
 import SettingsCard from './SettingCard';
 import PartnersCard from './PartnersCard';
+import Form from './Form';
 import { Container, Row, Col } from 'reactstrap';
 import './App.css';
 import call from "./call.gif";
+import text from "./giphy.gif";
+import Phone from "./phone.gif";
+import img1 from "../src/Orient.jpg";
+import img2 from "../src/palace.jpg";
+import img3 from "../src/bgm.jpg";
+import bahria from "./bahria_town_logo.png";
+import badge from "./badge-black.png";
+import Deal from "./deal.png";
+import Register from "./register.png";
+import Earn from "./earn.png";
+import Logo from "./logo-app.png";
 
 export default class ItemName extends React.Component {
   render() {
@@ -14,54 +26,93 @@ export default class ItemName extends React.Component {
    };
    if(this.props.divName=="Settings"){
     return (
-      <div className="mt-6 py-5" style={style}>
-        <h1 className="lead">
-        {this.props.text}
-        </h1>
+      <div className="py-5 png-rev" id="reviews" style={style}>
+      <Container>
+        <Row>
+          <Col xs="3" sm="4" md="4" lg="2" className="offset-lg-5 offset-md-4 offset-sm-3 offset-3 pr-sm-0"><h1>
+          {this.props.text}
+          </h1></Col>
+          <img width="52px" height="52px" className="borderRadius-red ml-badge" src={badge} />
+        </Row>
+      </Container>
         <br/>
           <Container>
             <Row>
-              <Col xs="12" sm="12" md="6" lg="4" className="mb-5"><SettingsCard details="This is a wider card with supporting text below as a natural lead-in to additional content."/></Col>
-              <Col xs="12" sm="12" md="6" lg="4" className="mb-5"><SettingsCard details="This is a wider card with supporting text below as a natural lead-in to additional content."/></Col>
-              <Col xs="12" sm={{ size: 12 }} md={{ size: 7, offset: "auto" }} lg={{ size: 4, offset: 0 }}><SettingsCard details="This is a wider card with supporting text below as a natural lead-in to additional content."/></Col>
+              <Col xs="12" sm="12" md="6" lg="6" className="mb-5"><SettingsCard img={img2} logo={bahria} details="While fixing kitchens and bathrooms where electrical circuitries are also fixed, hover to see comments" title="Houses" detailsHover="Issues were fixed with reasonable charges and in time. Quality of work was superb." titleHover="Bahria palace"/></Col>
+              <Col xs="12" sm="12" md="6" lg="6"><SettingsCard img={img3} logo={bahria} title="Masjid" details="We fix issues of Masajid in Bahria town for free. Hover to see what Bahria Grand mosque says about us." detailsHover="Issues were fixed without any charges and with extreme level of professionalism and quality." titleHover="Bahria - Grand Mosque"/></Col>
             </Row>
           </Container>
           </div>
     );}
     else if(this.props.divName=="Partners"){
      return (
-       <div className="py-5" style={style}>
-         <h1 className="lead">
+       <div className="py-5" id="partners" style={style}>
+         <h1>
          {this.props.text}
          </h1>
          <br/>
            <Container>
              <Row>
-               <Col xs="12" sm="12" md="6" lg="3" className="mb-4 mb-lg-0"><PartnersCard details="Quickly go from data to insight to action. Connect to hundreds of sources, prep data with ease, and create beautiful reports, all in minutes."/></Col>
-               <Col xs="12" sm="12" md="6" lg="3" className="mb-4 mb-lg-0"><PartnersCard details="Quickly go from data to insight to action. Connect to hundreds of sources, prep data with ease, and create beautiful reports, all in minutes."/></Col>
-               <Col xs="12" sm="12" md="6" lg="3" className="mb-4 mb-lg-0"><PartnersCard details="Quickly go from data to insight to action. Connect to hundreds of sources, prep data with ease, and create beautiful reports, all in minutes."/></Col>
-               <Col xs="12" sm="12" md="6" lg="3" className="mb-4 mb-lg-0"><PartnersCard details="Quickly go from data to insight to action. Connect to hundreds of sources, prep data with ease, and create beautiful reports, all in minutes."/></Col>
+               <Col xs="12" sm="12" md="6" lg="4" className="mb-4 mb-lg-0"><PartnersCard title="Deal nicely" src={Deal} details="Want a better living? Shake hands with MèérFix."/></Col>
+               <Col xs="12" sm="12" md="6" lg="4" className="mb-4 mb-lg-0"><PartnersCard title="Register" src={Register} details="Work as a certified technician by registering yourself with MèérFix."/></Col>
+               <Col xs="12" sm="12" md="6" lg="4" className="mb-4 mb-lg-0"><PartnersCard title="Earn more" src={Earn} details="Give a push to your earning by working with MèérFix."/></Col>
              </Row>
            </Container>
-           </div>
+        </div>
      );}
+     else if(this.props.divName=="Easy"){
+      return (
+        <div className="pt-5 mt-6" id="easy" style={style}>
+            <Container>
+              <Row className="d-flex align-items-center text-left">
+                <Col xs="12" sm="12" md="6" lg="6" className="mb-4 mb-lg-0 offset-lg-1">
+                <Row>
+                  <Col xs="12" sm="12" md="12" lg="12" className="mb-4 mb-lg-0">
+                    <h6 className="display-4 text-muted">Vital to know</h6>
+                    <h4 className="display-5 mt-4">{this.props.text}</h4>
+                    <p>Just choose the technician type you need, describe your problem <a href="#tryUs"> here </a> by contacting us through:</p>
+                    <Row>
+                      <Col xs="12" sm="12" md="6" lg="6" className="text-left">
+                        <h5>Sending message</h5>
+                        <p>checking problem(s) in "Problem(s)" field and clicking send message button after filling for the required information.</p>
+                      </Col>
+                      <Col xs="12" sm="12" md="6" lg="6" className="text-left">
+                      <h5>Calling Us</h5>
+                      <p>giving us a call on the given number and providing details in order to reach you as soon as possible.</p>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                </Col>
+                <Col xs="12" sm="12" md="6" lg="4" className="offset-lg-1 text-center">
+                  <img src={Phone} className="width-change"/>
+                </Col>
+              </Row>
+            </Container>
+         </div>
+      );}
      else if(this.props.divName=="PlaceOrder"){
       return (
-        <div className="py-5" style={style}>
-          <h1 className="lead mb-5">
+        <div className="py-5 png" id="tryUs" style={style}>
+          <h1 className="mb-5">
           {this.props.text}
           </h1>
           <br/>
             <Container>
               <Row>
-                <Col xs="6" sm="5"><div>
-                <img width="50%" className="borderRadius" src={call} />
-                </div></Col>
-                <Col xs="6" sm="7"><div>
+                <Col xs="6"><div>
+                <img width="20%" className="borderRadius" src={text} />
                 <h1 className="mb-5">
-                Call Now
+                Text Us
                 </h1>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <Form/>
+                </div></Col>
+                <Col xs="6"><div>
+                <img width="20%" className="borderRadius" src={call} />
+                <h1 className="mb-5">
+                Call Us
+                </h1>
+                <p>"Call us right away to your first splendid trial of MèérFix at 03324585276."</p>
                 </div></Col>
               </Row>
             </Container>
@@ -69,62 +120,31 @@ export default class ItemName extends React.Component {
       );}
       else if(this.props.divName=="Footer"){
        return (
-         <div className="py-5" style={style}>
-           <h1 className="lead">
-           </h1>
+         <div className="py-5  dots" id="about" style={style}>
            <br/>
              <Container>
                <Row>
-                 <Col xs="6" sm="3"><div>
-                 <h1 className="text-left">
-                 ServMate
+                 <Col xs="12" md="4"><div>
+                 <h1 className="text-md-left">
+                 MèérFix <img src={Logo} width="52"/>
                  </h1>
-                 <p className="text-left">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."</p>
+                 <p className="text-md-left">"With the best and very well-experienced technicians, we are committed to provide you with the properly organized and stressfree services in the region"</p>
                  </div></Col>
-                 <Col xs="6" sm="3">
-                 <div>
+                 <Col xs="12" md="4">
+                 <div className="pt-3">
                  <h5>
-                 COMPANY
+                 2017 © MèérFix
                  </h5>
-                 </div>
-                 <div>
-                 <ul className="list-unstyled">
-                 <li>Customer Loyalty Program</li>
-                 <li>About Us</li>
-                 <li>Contact Us</li>
-                 <li>Returns and Replacement Policies</li>
-                 <li>Warranty and Claims</li>
-                 </ul>
                  </div>
                  </Col>
-                 <Col sm="3"><div>
-                 <h5>
-                 COMPANY
-                 </h5>
+                 <Col xs="12" md="4">
+                 <div className="pt-3">
+                 <a href="#"><i className="fa fa-facebook-square mr-4 fontSize2" aria-hidden="true"></i></a>
+                 <a href="#"><i className="fa fa-twitter-square mr-4 fontSize2" aria-hidden="true"></i></a>
+                 <a href="#"><i className="fa fa-vimeo-square fontSize2 mr-4" aria-hidden="true"></i></a>
+                 <a href="#"><i className="fa fa-snapchat-square fontSize2" aria-hidden="true"></i></a>
                  </div>
-                 <div>
-                 <ul className="list-unstyled">
-                 <li>Customer Loyalty Program</li>
-                 <li>About Us</li>
-                 <li>Contact Us</li>
-                 <li>Returns and Replacement Policies</li>
-                 <li>Warranty and Claims</li>
-                 </ul>
-                 </div></Col>
-                 <Col sm="3"><div>
-                 <h5>
-                 COMPANY
-                 </h5>
-                 </div>
-                 <div>
-                 <ul className="list-unstyled">
-                 <li>Customer Loyalty Program</li>
-                 <li>About Us</li>
-                 <li>Contact Us</li>
-                 <li>Returns and Replacement Policies</li>
-                 <li>Warranty and Claims</li>
-                 </ul>
-                 </div></Col>
+                 </Col>
                </Row>
              </Container>
              </div>

@@ -11,8 +11,88 @@
   top: 56px;
 }
 
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+#target {
+  width: 345px;
+}
+
 .slick-dots {
-background-color: red;
+background-color: dodgerblue;
 }
 
 .mt-6{
@@ -44,9 +124,61 @@ cursor: default;
   cursor: pointer;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 .offset-md-auto {
   margin-left: 20.666667%;
+        }
+}
+
+.bg-trans {
+  background-color: #292b2c !important;
+}
+
+.png {
+  background-image: url(../src/waves.png);
+  background-size: cover;
+}
+
+.dots {
+  background-image: url(../src/dots.png);
+  background-size: cover;
+}
+
+#easy p {
+  font-weight: lighter;
+}
+
+.width-change {
+  width: 100%;
+}
+
+@media (max-width: 767px){
+  .width-change {
+    width: 60%;
+  }
+}
+
+.fontSize2 {
+  font-size: 2rem;
+  color: white !important;
+}
+
+.polka {
+  background-image: url(../src/footer-bgWhite.png);
+  background-size: contain;
+}
+
+.png-rev {
+  background-image: url(../src/graph.png);
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+.bg-trans {
+  background-color:rgba(41, 43, 44, 0.8) !important;
+}
+.your-class {
+  margin-top: -56px !important;
 }
 }
 
@@ -80,7 +212,7 @@ cursor: default;
 }
 
 .borderLeft:hover {
-  border-left: 5px solid red !important;
+  border-left: 5px solid dodgerblue !important;
 }
 
 .transparentButton {
@@ -98,11 +230,157 @@ cursor: default;
   border: 0px solid rgba(0, 0, 0, 0.125) !important;
 }
 
-.card-img-overlay .card-title{
-  color:red !important;
+.fancy-tile {
+    background-color: dodgerblue;
+    height: 405px;
+    padding: 30px 25px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
 }
 
-.card-img-overlay .mt-5{
+.fancy-tile:hover .fancy-tile-content {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.fancy-tile .fancy-tile-content {
+    top: 200px;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+.fancy-tile:hover .fancy-tile-content-hover {
+  background-color: dodgerblue !important;
+    display: block;
+    opacity: 0.8;
+    transition: opacity .5s;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-hover:hover .menu-hover {
+    display: inline-block;
+    position: absolute;
+    text-decoration: none;
+    top: 96%;
+}
+
+.menu-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    border-bottom: 8px dashed;
+    border-bottom: 8px solid\9;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    position: absolute;
+    top: -8px;
+    left: 5%;
+    color: #fff;
+}
+
+.fancy-tile .fancy-tile-content-hover {
+    background-color: rgba(255,255,255,.9);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 25px;
+    opacity: 0;
+    text-align: left;
+    transition: opacity .5s;
+    width: 100%;
+}
+
+.py-10 {
+  padding: 10rem;
+}
+
+.ml-minus11 {
+  margin-left: -11rem;
+}
+
+@media (max-width: 769px){
+  .ml-minus11 {
+    margin-left: -20rem !important;
+  }
+}
+
+@media (max-width: 482px){
+  .ml-minus11 {
+    margin-left: -14rem !important;
+  }
+}
+
+.ml-badge {
+  margin-left: 0rem !important;
+}
+
+@media (max-width: 1199px){
+  .ml-badge {
+    margin-left: 1rem !important;
+  }
+}
+
+@media (max-width: 991px){
+  .ml-badge {
+    margin-left: -1.4rem !important;
+  }
+}
+
+@media (max-width: 767px){
+  .ml-badge {
+    margin-left: 0.5rem !important;
+  }
+}
+
+@media (max-width: 575px){
+  .ml-badge {
+    margin-left: 2.8rem !important;
+  }
+}
+
+@media (max-width: 523px){
+  .ml-badge {
+    margin-left: 3rem !important;
+  }
+}
+
+@media (max-width: 474px){
+  .ml-badge {
+    margin-left: 3.8rem !important;
+  }
+}
+
+@media (max-width: 430px){
+  .ml-badge {
+    margin-left: 5rem !important;
+  }
+}
+
+.text-dodge {
+  color: dodgerblue !important;
+}
+
+
+.borderRadius-red {
+  border: 2px solid dodgerblue;
+  border-radius: 51px;
+}
+
+.card-img-overlay .card-title {
+  color: black !important;
+}
+
+.card-img-overlay .mt-5 {
   margin-top: 10rem !important;
 }
 

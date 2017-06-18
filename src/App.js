@@ -13,10 +13,11 @@ class App extends Component {
       <div className="App">
         <Navbar/>
         <Slick />
-        <ItemName text="Settings" color="red" bgColor="black" divName="Settings"/>
-        <ItemName text="Partners" color="red" bgColor="black" divName="Partners"/>
-        <ItemName text="Place Order" color="black" bgColor="red" divName="PlaceOrder"/>
-        <ItemName  color="white" bgColor="black" divName="Footer"/>
+        <ItemName text="Easy as pie" color="black" bgColor="white" divName="Easy"/>
+        <ItemName text="Improve your living" color="dodgerblue" bgColor="black" divName="Partners"/>
+        <ItemName color="white" bgColor="dodgerblue" divName="PlaceOrder"/>
+        <ItemName text="Reviews" color="dodgerblue" bgColor="black" divName="Settings"/>
+        <ItemName  color="white" bgColor="dodgerblue" divName="Footer"/>
       </div>
     );
   }

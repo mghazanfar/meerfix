@@ -2,21 +2,25 @@ import React from 'react';
 import { Card, CardTitle, CardText, CardImg, CardImgOverlay,CardFooter } from 'reactstrap';
 import "./App.css";
 
-export default class SrttingCard extends React.Component{
+export default class SettingCard extends React.Component{
   render() {
   return (
-    <div>
-      <Card inverse className="noBorder">
-        <CardImg width="100%" className="radiusZero" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97270&w=318&h=270&bg=333333&txtclr=666666" alt="Card image cap" />
-        <CardImgOverlay>
-          <CardTitle className="mt-2">Card Title</CardTitle>
-          <CardText >{this.props.details}</CardText>
-          <CardText>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </CardText>
+    <div id="reviews">
+      <Card className="noBorder fancy-tile" style={{backgroundImage: "url(" + this.props.img + ")"}}>
+        <CardImgOverlay className="fancy-tile-content">
+          <CardTitle className="mt-2 display-4"><b>{this.props.title}</b></CardTitle>
+          <CardText className="mt-2 display-6 text-dodge"><b>{this.props.details}</b></CardText>
         </CardImgOverlay>
-        <CardFooter className="radiusZero">Footer</CardFooter>
+        <CardImgOverlay className="fancy-tile-content-hover">
+        <CardTitle className="mt-2 display-4">{this.props.titleHover}</CardTitle>
+        <CardText className="mt-2 display-6 text-white">{this.props.detailsHover}</CardText>
+        </CardImgOverlay>
       </Card>
+      <CardFooter className="radiusZero">
+      <div className="ml-minus11">
+      <img width="10%" className="borderRadius" src={this.props.logo} />
+      </div>
+      </CardFooter>
     </div>
   );
 }

@@ -6,8 +6,8 @@ import imge1 from "./1.jpg";
 import imge2 from "./2.jpg";
 import imge3 from "./3.jpg";
 import imge4 from "./4.jpg";
-import imge5 from "./3.jpg";
-import imge6 from "./2.jpg";
+import imge5 from "./5.jpg";
+import imge6 from "./6.jpg";
 
 
 export default class SimpleSlider extends React.Component {

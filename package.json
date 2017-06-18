@@ -1,6 +1,12 @@
 {
   "name": "serv-mate",
   "version": "0.1.0",
+  "eslintConfig": {
+        "env": {
+            "browser": true,
+            "node": true
+        }
+    },
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
@@ -10,6 +16,8 @@
     "react-addons-transition-group": "^15.5.2",
     "react-dom": "^15.5.4",
     "react-responsive-carousel": "^3.1.17",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "react-slick": "^0.14.11",
     "reactstrap": "^4.6.2",
     "slick-carousel": "^1.6.0"
